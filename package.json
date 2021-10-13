@@ -1,0 +1,16 @@
+{
+  "name": "medi-web",
+  "version": "1.0.0",
+  "main": "assets/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "firebase": "^9.1.1",
+    "firebaseui": "^5.0.0"
+  }
+}
