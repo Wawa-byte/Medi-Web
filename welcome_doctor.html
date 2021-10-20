@@ -10,48 +10,6 @@
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
-
-    <script type="text/javascript">
-        initApp = function() {
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                    // User is signed in.
-                    var displayName = user.displayName;
-                    var email = user.email;
-                    var emailVerified = user.emailVerified;
-                    var photoURL = user.photoURL;
-                    var uid = user.uid;
-                    var phoneNumber = user.phoneNumber;
-                    var providerData = user.providerData;
-                    user.getIdToken().then(function(accessToken) {
-                        document.getElementById('sign-in-status').textContent = 'Signed in';
-                        document.getElementById('sign-in').textContent = 'Sign out';
-                        document.getElementById('account-details').textContent = JSON.stringify({
-                            displayName: displayName,
-                            email: email,
-                            emailVerified: emailVerified,
-                            phoneNumber: phoneNumber,
-                            photoURL: photoURL,
-                            uid: uid,
-                            accessToken: accessToken,
-                            providerData: providerData
-                        }, null, '  ');
-                    });
-                } else {
-                    // User is signed out.
-                    document.getElementById('sign-in-status').textContent = 'Signed out';
-                    document.getElementById('sign-in').textContent = 'Sign in';
-                    document.getElementById('account-details').textContent = 'null';
-                }
-            }, function(error) {
-                console.log(error);
-            });
-        };
-
-        window.addEventListener('load', function() {
-            initApp()
-        });
-    </script>
 </head>
 
 <body>
@@ -79,19 +37,19 @@
                 <div class="row justify-content-center">
                     <div class="col-md-5 feature-box"><i class="icon-people icon"></i>
                         <h4>View Patients</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                        <p>View currently registered patients.</p>
                     </div>
                     <div class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
                         <h4>Enter Patient Information</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                        <p>Register new patients into records</p>
                     </div>
                     <div class="col-md-5 feature-box"><i class="icon-bag icon"></i>
                         <h4>View Risk Assessments</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                        <p>Registered patients risk assessment.</p>
                     </div>
                     <div class="col-md-5 feature-box"><i class="icon-user icon"></i>
                         <h4>My account</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                        <p>Modify or make changes to your Medi account.</p>
                     </div>
                 </div>
             </div>
@@ -103,23 +61,23 @@
                 <div class="col-sm-3 offset-xxl-1">
                     <h5>Get started</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="registration.html">Sign up</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 offset-xxl-1">
                     <h5>About us</h5>
                     <ul>
                         <li></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                        <li><a href="about-us.html">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 offset-xxl-1">
                     <h5>Support</h5>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact-us.html">Help desk</a></li>
                     </ul>
                 </div>
             </div>
@@ -132,6 +90,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration Page</title>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -33,21 +38,7 @@
                 <div class="block-heading">
                     <h2 class="text-info">Registration</h2>
                 </div>
-                <form>
-                    <div class="mb-3"> <label class="form-label" for="name">Name</label>
-                        <input class="form-control item" type="text" id="name">
-                    </div>
-                    <div class="mb-3"><label class="form-label" for="email">Email</label>
-                        <input class="form-control item" type="email" id="email">
-                    </div>
-                    <div class="mb-3"><label class="form-label" for="password">Password (6 or more characters)&nbsp;</label>
-                        <input class="form-control item" type="password" id="password">
-                    </div>
-                        <label class="form-label" for="password">Confirm Password</label>
-                        <input class="form-control" type="password">
-                    <br>
-                    <button class="btn btn-primary" type="submit">Sign Up</button>
-                </form>
+                <div id="firebaseui-auth-container"></div>
             </div>
         </section>
     </main>
@@ -86,7 +77,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script type="module" src="assets/js/index.js"></script>
+    <script src="assets/js/FirebaseConfig.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>
