@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Brand</title>
+    <title>Enter Patient</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -14,34 +14,42 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="index.html">Medi-Web</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand logo" href="#">Medi-Web</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Sign out</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="page login-page">
-        <section class="clean-block clean-form dark">
+    <main class="page landing-page">
+        <section class="clean-block features">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Log In</h2>
+                    <h1>Enter Patient Information</h1>
+                    <h2 class="text-info"></h2>
                     <p></p>
                 </div>
-                <form>
-                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="mb-3"><label class="form-label" for="password">Password</label><input class="form-control" type="password" id="password"></div>
-                    <div class="mb-3">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
-                    </div><button class="btn btn-primary" type="submit">Log In</button>
-                </form>
             </div>
+            <section class="clean-block clean-form dark">
+                <div class="container">
+                    <div class="block-heading">
+                        <p>Please enter the patients information below whom you would like to register</p>
+                    </div>
+                    <form>
+                        <div class="mb-3"><label class="form-label" for="name">Forename</label><input class="form-control item" type="text" id="name"></div>
+                        <div class="mb-3"><label class="form-label" for="name">Surname</label><input class="form-control item" type="text" id="name-1"></div>
+                        <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email"></div>
+                        <div class="mb-3"><label class="form-label" for="age">Age (Numeric Only)</label><input class="form-control" type="number"></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Male</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Female</label></div><button class="btn btn-primary" type="submit">Register</button>
+                    </form>
+                </div>
+            </section>
         </section>
     </main>
     <footer class="page-footer dark">
@@ -50,23 +58,23 @@
                 <div class="col-sm-3 offset-xxl-1">
                     <h5>Get started</h5>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="registration.html">Sign up</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 offset-xxl-1">
                     <h5>About us</h5>
                     <ul>
                         <li></li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="about-us.html">Reviews</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 offset-xxl-1">
                     <h5>Support</h5>
                     <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact-us.html">Help desk</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +87,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
