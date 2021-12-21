@@ -15,6 +15,6 @@ var config = {
 };
 
 if(!hasInit){
-    firebase.initializeApp(config);
+    fireBase.initializeApp(config);
     hasInit = true;
 }
