@@ -16,12 +16,22 @@ const reviewRef = database.ref('Reviews');
 reviewRef.on('value', function (snapshot) {
     snapshot.forEach(function (elements) {
         let review = elements.val();
-        console.log("Review working");
-        console.log(review);
         let reviewJson = JSON.stringify(review);
         reviewJson = reviewJson.replace(/[{}]/g, "");
         document.querySelector('#viewReview').innerHTML += `
         <div>${reviewJson}</div>
+        `
+    });
+})
+
+const aiRef = database.ref('Predictions');
+aiRef.on('value', function (snapshot) {
+    snapshot.forEach(function (item) {
+        let analysis = item.val();
+        let analysisJson = JSON.stringify(analysis);
+        analysisJson = analysisJson.replace(/[{}]/g, "");
+        document.querySelector('#viewRisk').innerHTML += `
+        <div>${analysisJson}</div>
         `
     });
 })
