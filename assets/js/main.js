@@ -27,3 +27,22 @@
 //     init();
 //     mainApp.logout = logtout;
 // })();
+
+fireBase.auth().onAuthStateChanged(user => {
+    console.log(user);
+    if(!user) {
+        window.location = 'https://medi-check-76263.web.app/registration.html'; //If User is not logged in, redirect to login page
+    }
+});
+
+// const {getAuth} = require("firebase/firebase-auth");
+// const auth = fireBase.auth();
+// getAuth()
+//     .getUserByEmail("waleedakhtar2002@gmail.com")
+//     .then((userRecord) => {
+//         // See the UserRecord reference doc for the contents of userRecord.
+//         console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+//     })
+//     .catch((error) => {
+//         console.log('Error fetching user data:', error);
+//     });
