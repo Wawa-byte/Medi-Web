@@ -1,11 +1,11 @@
 const database = fireBase.database();
-
+// Prints out data from the realtime database
 const usersRef = database.ref('Patients');
 usersRef.on('value', function (snapshot){
     snapshot.forEach(function (element){
         let test = element.val();
         let jsontest = JSON.stringify(test, null, 2);
-        jsontest = jsontest.replace(/[{}]/g, "");
+        jsontest = jsontest.replace(/[{}]/g, ""); // Removes the {} from the JSON
         document.querySelector('#viewPatient').innerHTML += `
         <div>${jsontest}</div>
         `
@@ -35,3 +35,10 @@ aiRef.on('value', function (snapshot) {
         `
     });
 })
+
+fireBase.auth().onAuthStateChanged(user => {
+    console.log(user);
+    if(!user) {
+        window.location = 'https://medi-check-76263.web.app/registration.html'; //If User is not logged in, redirect to login page
+    }
+});

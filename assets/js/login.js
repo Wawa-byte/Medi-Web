@@ -1,3 +1,4 @@
+// Used for auth
 var uiConfig = {
     signInSuccessUrl: 'https://medi-check-76263.web.app/welcome_doctor.html',
     signInOptions: [
